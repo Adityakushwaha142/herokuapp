@@ -1,9 +1,10 @@
 const express= require("express") ; 
 const app = express() ; 
+const PORT =process.env.PORT || 2424
 app.get("/" , (req, res)=>{
     res.send("Hello world") ; 
 })
 
-app.listen(2424 , ()=>{
-    console.log("server started on http://localhost:2424") ; 
+app.listen(PORT , ()=>{
+    console.log(`server started on http://localhost:${PORT}`) ; 
 })
